@@ -41,8 +41,8 @@ class ObjectToMove{
 	void set_value_transform_SizeWorld(arma::fmat size_World);
 
 	/*Rotations*/
-	void rotate_Axe_Y();
-
+	float rotate_on_Axe(float angle, float angle_exp,float sense,float add_value);
+	void check_new_senseRotation();
 	//Getters
 	std::string get_objName();
 	arma::fmat get_transf();
@@ -79,6 +79,11 @@ class ObjectToMove{
 		float angleX;
 		float angleY;
 		float angleZ;
+
+		float sense_onX;
+		float sense_onY;
+		float sense_onZ;
+
 		Object my_Obj;
 		std::string object_name;
 		std::string file_name;
@@ -89,8 +94,6 @@ class ObjectToMove{
 		float alpha;
 		float aceleration;
 		float tam;
-		int type_move;
-		int previous_type_move;
 
 };
 
